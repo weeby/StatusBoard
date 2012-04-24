@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+
+import StatusBoard.workers
+
+app_config = {
+    'xmpp_bot': {
+        'server': 'server',
+        'port': 0,
+        'jid': 'jid',
+        'password': 'password',
+        'database': None
+    },
+    'people': [
+        { 'name': 'Person', 'ip': '127.0.0.1', 'gravatar_mail': 'person@company.com', 'jid': 'person@company.com' }
+    ],
+    'redmine': {
+        'api_key': '',
+        'api_base': '',
+        'issue_trackers': { 1: '' }
+    },
+    'yahoo_weather': {
+        'woeid': '',
+        'unit': ''
+    }
+}
+
+app_config['logos_path'] = os.path.dirname(__file__)
+
+channels = {
+    'pinger': StatusBoard.workers.PingerWorker
+}

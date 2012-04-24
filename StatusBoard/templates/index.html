@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>StatusBoard</title>
+<meta name="Robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="en" />
+<link href="{{ static_url('reset-min.css') }}" media="screen" rel="stylesheet" type="text/css" >
+<link href="{{ static_url('gfx/style.css') }}" media="screen" rel="stylesheet" type="text/css" >
+<script src="{{ static_url('mootools-core-1.4.0-full-nocompat-yc.js') }}"></script>
+<script src="{{ static_url('BTHEventSource.js') }}"></script>
+<script src="{{ static_url('application.js') }}"></script>
+<script src="{{ static_url('clock.js') }}"></script>
+</head>
+<body>
+
+<div id="header">
+<h1><img src="/logo.png"></h1>
+
+<ul id="top">
+<li id="present"><span>Present</span> <strong>?</strong></li>
+<li id="absent"><span>Absent</span> <strong>?</strong></li>
+<li id="projects_count"><span>Projects</span> <strong>?</strong></li>
+</ul>
+
+<div id="weather">
+<img src="{{ static_url('weather-icons/na.png') }}" alt="">
+<p>
+<strong>?</strong>
+<span>?</span>
+</p>
+</div>
+
+<div id="clock">
+    <div class="tick"><span></span></div>
+    <div class="tick tick15"><span></span></div>
+    <div class="tick tick30"><span></span></div>
+    <div class="tick tick45"><span></span></div>
+    <div class="hand hours"><span></span></div>
+    <div class="hand minutes"><span></span></div>
+    <div class="hand seconds"><span></span></div>
+    <div class="center"></div>
+</div>
+</div>
+
+
+
+<table id="projectsHeader">
+<thead>
+<tr>
+<td>Project name</td>
+<td width="265" class="tasks">Tasks</td>
+<td width="265" class="errors">Errors</td>
+<td>People working on the project</td>
+</tr>
+</thead>
+</table>
+
+<div id="content">
+
+<table id="projects">
+<tbody>
+</tbody>
+
+</table>
+</div>
+<div id="news">
+<img src="{{ static_url('gfx/news.png') }}" alt="Breaking news">
+</div>
+
+<div id="blanker"><div class="logo"></div></div>
+</body>
+</html>

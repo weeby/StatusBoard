@@ -1,0 +1,374 @@
+html {
+  font-size: 13px;
+  font-family: arial, sans-serif;
+  color: #fff;
+  background: #000;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+body {
+  text-align: center;
+}
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 179px;
+  width: 100%;
+  background: #000;
+  overflow: hidden;
+}
+h1 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+#weather {
+  position: absolute;
+  top: 30px;
+  right: 180px;
+  height: 120px;
+}
+#weather p {
+  float: right;
+  padding: 20px 0 0 15px;
+}
+#weather span, #weather strong {
+  display: block;
+  font-family: "Helvetica Neue", helvetica, arial;
+  text-align: left;
+}
+#weather strong {
+  font-size: 42px;
+  font-weight: bold;
+}
+#weather span {
+  font-size: 17px;
+  color: #fff;
+  text-transform: uppercase;
+}
+#weather img {
+  display: block;
+  float: left;
+}
+#clock {
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  border: 2px solid #666666;
+  display: block;
+  height: 118px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 118px;
+}
+#clock div.center {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  background: #666666;
+  border-radius: 2px;
+  height: 4px;
+  left: 57px;
+  position: absolute;
+  top: 57px;
+  width: 4px;
+}
+#clock div.hand, #clock div.tick {
+  display: block;
+  left: 58px;
+  position: absolute;
+  width: 2px;
+}
+#clock div.hand {
+  height: 114px;
+  top: 2px;
+}
+#clock div.hand span {
+  background: #ffffff;
+  bottom: 57px;
+  display: block;
+  left: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+#clock div.hours span {
+  top: 17px;
+}
+#clock div.seconds span {
+  background: #dc5b2e;
+}
+#clock div.tick {
+  height: 118px;
+  top: 0px;
+}
+#clock div.tick span {
+  background: #666666;
+  display: block;
+  height: 5px;
+  left: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+#clock div.tick15 {
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+#clock div.tick30 {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#clock div.tick45 {
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+#top {
+  margin: 30px auto 0;
+  height: 120px;
+  width: 540px;
+}
+#top li {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  float: left;
+  width: 170px;
+  height: 120px;
+  margin: 0 5px;
+  position: relative;
+  background: #363636;
+  text-align: center;
+  font-family: "Helvetica Neue", helvetica, arial;
+}
+#top li span, #top li strong {
+  position: absolute;
+  display: block;
+  width: 100%;
+}
+#top li strong {
+  top: 0;
+  left: 0;
+  background: #666666;
+  height: 85px;
+  line-height: 85px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  font-size: 56px;
+  font-weight: bold;
+}
+#top li span {
+  bottom: 0;
+  left: 0;
+  height: 35px;
+  line-height: 35px;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+#top li#absent {
+  background: #201f1f;
+}
+#top li#absent strong {
+  background: #2d2c2c;
+}
+#top li#projects_count {
+  background: #cd3e1b;
+}
+#top li#projects_count strong {
+  background: #dc5b2e;
+}
+#content {
+  position: absolute;
+  top: 230px;
+  bottom: 128px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+#projectsHeader {
+  position: absolute;
+  top: 179px;
+  left: 0;
+  height: 51px;
+  width: 100%;
+  table-layout: fixed;
+  text-align: left;
+  overflow: hidden;
+}
+#projectsHeader thead {
+  background: url('bg_th.png') repeat-x;
+  font-family: "Helvetica Neue", helvetica, arial;
+}
+#projectsHeader thead td {
+  height: 51px;
+  line-height: 51px;
+  background: url('bg_p.png') left top no-repeat;
+  border-bottom: 1px #000 solid;
+  font-size: 18px;
+  color: #613814;
+  padding-left: 30px;
+}
+#projectsHeader thead td.tasks {
+  padding: 0;
+  border-left: 1px #000 solid;
+  border-right: 1px #000 solid;
+  background: url('bg_t.png') repeat-x;
+  text-align: center;
+  color: #064126;
+  width: 265px;
+}
+#projectsHeader thead td.errors {
+  padding: 0;
+  border-right: 1px #000 solid;
+  background: url('bg_e.png') repeat-x;
+  text-align: center;
+  color: #5a0404;
+  width: 265px;
+}
+#projects {
+  position: relative;
+  width: 100%;
+  table-layout: fixed;
+  text-align: left;
+}
+#projects tbody tr {
+  height: 102px;
+  border-bottom: 1px #383838 solid;
+  background-color: #141414;
+  font-family: arial, tahoma;
+}
+#projects tbody tr td {
+  line-height: 102px;
+  padding-left: 30px;
+}
+#projects tbody tr td.name {
+  background-color: #201f1f;
+  font-size: 32px;
+}
+#projects tbody tr td.errors, #projects tbody tr td.tasks {
+  padding: 0;
+  text-align: center;
+  font-size: 22px;
+  width: 265px;
+}
+#projects tbody tr td.errors span, #projects tbody tr td.tasks span {
+  color: #6d6d6d;
+}
+#projects tbody tr td.persons ul {
+  line-height: 14px;
+  font-size: 12px;
+  color: #fff;
+}
+#projects tbody tr td.persons ul li {
+  display: block;
+  float: left;
+  text-align: center;
+  margin-right: 3px;
+}
+#projects tbody tr td.persons ul li img {
+  margin: 0 auto 5px;
+  max-width: 60px;
+  max-height: 70px;
+  display: block;
+}
+#projects tbody tr.even {
+  background-color: #000;
+}
+#projects tbody tr.even td.name {
+  background-color: #171717;
+}
+#news {
+  text-align: left;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 128px;
+  background: url('footer.png') repeat-x;
+  overflow: hidden;
+}
+#news > img {
+  display: block;
+  float: left;
+}
+#news #msg {
+  display: block;
+  height: 128px;
+  line-height: 128px;
+  font-size: 42px;
+  font-weight: bold;
+  color: #000;
+  margin-left: 299px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+#news #msg img {
+  margin: 0px 18px;
+  vertical-align: middle;
+}
+/*@-moz-keyframes pulsate {
+    0% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}*/
+#blanker {
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  background: #000000 url('blanker.jpg') no-repeat center center;
+  bottom: 0px;
+  display: block;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transition: opacity 1s ease-in-out;
+}
+#blanker.visible {
+  opacity: 1;
+}
+#blanker .logo {
+  -moz-animation-name: pulsate;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-name: pulsate;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  background: transparent url('/blanker_logo.png') no-repeat center center;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}

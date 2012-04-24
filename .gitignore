@@ -1,0 +1,12 @@
+*.pyc
+*.swp
+*.log
+config.py
+*.bak
+*.sqlite
+build/*
+StatusBoard.egg-info/*
+dist/*
+*.DS_Store
+logo.png
+blanker_logo.png
