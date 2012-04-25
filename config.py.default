@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import StatusBoard.workers
+import os
 
 app_config = {
     'xmpp_bot': {

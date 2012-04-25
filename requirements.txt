@@ -1,0 +1,2 @@
+tornado==2.1
+sleekxmpp==1.0rc2
