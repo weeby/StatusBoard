@@ -41,6 +41,15 @@ If you wish to add your logos to the app place files `logo.png` and `blanker_log
 
 Use a 187px x 119px image for `logo.png`. `blanker_logo.png` will be centered in the viewport automatically.
 
+Screens
+-
+
+![Screen 01](http://weebystudio.com/sb/01.jpg)
+
+![Screen 02](http://weebystudio.com/sb/02.jpg)
+
+![Screen 03](http://weebystudio.com/sb/03.jpg)
+
 Credits
 -
 Weather state icons: http://vclouds.deviantart.com/art/VClouds-Weather-Icons-179152045 (CC BY-NC-SA 3.0)
